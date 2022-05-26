@@ -1,8 +1,11 @@
 <?php 
 
-public static function world()
+class SchoolOnlineConfig
 {
-    return 'Hello World, Composer!';
+    public static function world()
+    {
+        return 'Hello World, Composer!';
+    }
 }
 
 ?>
