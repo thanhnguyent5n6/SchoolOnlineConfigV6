@@ -1,0 +1,24 @@
+{
+    "name": "schoolonline/config",
+    "description": "Config libraries, enumerics, constants for SchoolOnlineVer6",
+    "type": "php",
+    "license": "1.0",
+    "authors": [
+        {
+            "name": "schoolonline",
+            "email": "nguyennt@omt.vn"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.2.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "SchoolOnline\\Config\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
