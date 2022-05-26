@@ -2,7 +2,7 @@
     "name": "schoolonline/config",
     "description": "Config libraries, enumerics, constants for SchoolOnlineVer6",
     "type": "php",
-    "license": "OMT",
+    "license": "MIT",
     "authors": [
         {
             "name": "schoolonline",
