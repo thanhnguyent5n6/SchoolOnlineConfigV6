@@ -1,12 +1,16 @@
-<?php 
+<?php
 
-class SchoolOnlineConfig
+
+namespace SchoolOnline\Config;
+
+
+class HelperV6
 {
     /**
-     * @param String $token
+     * @param $token
      * @return array
      */
-    public function parseTokenJWT(String $token)
+    public function parseTokenJWT( $token = "")
     {
         try {
             $tokenParts = explode(".", $token);
@@ -26,5 +30,3 @@ class SchoolOnlineConfig
         }
     }
 }
-
-?>
