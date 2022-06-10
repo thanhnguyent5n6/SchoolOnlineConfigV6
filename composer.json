@@ -1,5 +1,5 @@
 {
-    "name": "SchoolOnline Config",
+    "name": "schoolonline/v6",
     "description": "Config libraries, enumerics, constants for SchoolOnlineVer6",
     "type": "php",
     "license": "MIT",
