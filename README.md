@@ -1,4 +1,4 @@
 # SchoolOnlineConfigV6
 
 install via composer:
-composer require schoolonline/config
+composer require schoolonline/v6
