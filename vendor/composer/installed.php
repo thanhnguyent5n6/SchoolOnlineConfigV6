@@ -5,18 +5,18 @@
         'type' => 'php',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '6a21c5a38942c720dc4022799e291966caedead3',
-        'name' => 'schoolonline/config',
+        'reference' => '9a7987aa7ada19c6bb1148aa62cf16769be09aad',
+        'name' => 'schoolonline/v6',
         'dev' => true,
     ),
     'versions' => array(
-        'schoolonline/config' => array(
+        'schoolonline/v6' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'type' => 'php',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '6a21c5a38942c720dc4022799e291966caedead3',
+            'reference' => '9a7987aa7ada19c6bb1148aa62cf16769be09aad',
             'dev_requirement' => false,
         ),
     ),
