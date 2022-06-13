@@ -29,4 +29,10 @@ class HelperV6
             );
         }
     }
+
+    public static function getPayloadFromTokenJWT($token = "")
+    {
+        $data = self::parseTokenJWT($token);
+        return $data['payload'] ?? [];
+    }
 }
