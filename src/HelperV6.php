@@ -10,7 +10,7 @@ class HelperV6
      * @param $token
      * @return array
      */
-    public function parseTokenJWT( $token = "")
+    public static function parseTokenJWT($token = "")
     {
         try {
             $tokenParts = explode(".", $token);
@@ -22,7 +22,7 @@ class HelperV6
                 'header' => $jwtHeader,
                 'payload' => $jwtPayload,
             );
-        } catch (Exception $exception) {
+        } catch (\Exception $exception) {
             return array(
                 'header' => [],
                 'payload' => [],
