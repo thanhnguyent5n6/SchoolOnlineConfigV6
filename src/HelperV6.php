@@ -35,4 +35,23 @@ class HelperV6
         $data = self::parseTokenJWT($token);
         return $data['payload'] ?? [];
     }
+
+    public static function getPermissionsFromLayoutUnit($layoutCode, $unitId, $dataToken)
+    {
+        $permissions = [];
+        foreach($dataToken->Layouts as $layout) {
+            if($layout->Code != $layoutCode)
+                continue;
+
+            foreach($layout->Units as $unit) {
+                if($unit->Id != $unitId)
+                    continue;
+
+                foreach($unit->Permissions as $permission) {
+                    $permissions[] = $permission;
+                }
+            }
+        }
+        return $permissions;
+    }
 }
