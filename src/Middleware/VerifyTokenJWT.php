@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace SchoolOnline\VerifyTokenJWT;
 
 use Closure;
 use Illuminate\Support\Facades\App;
