@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Services;
+namespace SchoolOnline\Service;
 
 
 abstract class BaseService

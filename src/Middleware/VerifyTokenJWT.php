@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace SchoolOnline\Middleware;
 
-use App\Libs\CommonLib;
 use Carbon\Carbon;
 use Closure;
 use Illuminate\Support\Facades\App;

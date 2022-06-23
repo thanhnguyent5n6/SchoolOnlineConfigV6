@@ -20,7 +20,8 @@
         },
         "files": [
             "src/init.php",
-            "src/Middleware/VerifyTokenJWT.php"
+            "src/Middleware/VerifyTokenJWT.php",
+            "src/Service/BaseService.php"
         ]
     }
 }
