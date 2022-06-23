@@ -19,7 +19,7 @@ class VerifyTokenJWT
     {
         $token = $request->header('authorization');
         $payload = HelperV6::getPayloadFromTokenJWT($token);
-        $dataJson = $payload['data'] ?? [];
+        $dataJson = !empty($payload['data']) ? $payload['data'] : [];
         if(empty($dataJson))
             return response('Bạn không có quyền thao tác', 403);
 
