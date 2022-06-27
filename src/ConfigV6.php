@@ -40,4 +40,39 @@ class ConfigV6
     const ATTENDANCE_STATUS_EXCUSED_ABSENT_SCHEDULED = 5;//Vang co phep (co ke hoach)
     const ATTENDANCE_STATUS_EXCUSED_ABSENT_UNSCHEDULED = 6;//Vang co phep (dot xuat)
     const ATTENDANCE_STATUS_NOT_SCHOOL_YET = 7;// chua den truong
+
+    const TENANT_STATUS_LOCKED = 0;
+    const TENANT_STATUS_ACTIVE = 1;
+    const TENANT_STATUS_TRIAL_USING = 2;
+    const TENANT_STATUS_EXPIRED = 3;
+
+    const LOCATION_VN = 'vi';
+    const LOCATION_EN = 'en';
+    const LOCATION_JAPAN = 'jp';
+
+    const TIMEZONE_VN  = 'UTC +07:00';
+
+    const LANGUAGE_VN = 'vi';
+    const LANGUAGE_EN = 'en';
+    const LANGUAGE_JAPAN = 'jp';
+
+    const CURRENCY_UNIT_VN = 'VND';
+    const CURRENCY_UNIT_US = 'DOLLAR';
+
+    const FIRST_NAME = 'FirstName';
+    const MIDDLE_NAME = 'MiddleName';
+    const LAST_NAME = 'LastName';
+
+    const LAYOUT_OMT = 'omt';
+    const LAYOUT_MINISTRY = 'ministry';
+    const LAYOUT_DEPARTMENT = 'department';
+    const LAYOUT_DIVISION = 'division';
+    const LAYOUT_STAFF = 'staff';
+    const LAYOUT_TEACHER = 'teacher';
+    const LAYOUT_PARENT = 'parent';
+    const LAYOUT_STUDENT = 'student';
+    const LAYOUT_TENANT = 'tenant';
+    const LAYOUT_CAMPUS = 'campus';
+
+
 }
