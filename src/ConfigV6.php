@@ -74,5 +74,6 @@ class ConfigV6
     const LAYOUT_TENANT = 'tenant';
     const LAYOUT_CAMPUS = 'campus';
 
-
+    const VALIDATE_SUCCESSFUL = 1;
+    const VALIDATE_FAILED = 0;
 }
