@@ -12,6 +12,9 @@ class ConfigV6
     const NO_DELETED = 0;
     const DELETED = 1;
 
+    const NO_ACTIVE = 0;
+    const ACTIVE = 1;
+
     const DAY_OF_WEEK_SUNDAY = 0;//Chu nhat
     const DAY_OF_WEEK_MONDAY = 1;//Thu 2
     const DAY_OF_WEEK_TUESDAY = 2;//Thu 3

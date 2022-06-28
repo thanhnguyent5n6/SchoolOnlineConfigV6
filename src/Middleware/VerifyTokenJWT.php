@@ -5,6 +5,7 @@ namespace SchoolOnline\Middleware;
 use Carbon\Carbon;
 use Closure;
 use Illuminate\Support\Facades\App;
+use SchoolOnline\Config\ConfigV6;
 use SchoolOnline\Config\HelperV6;
 
 class VerifyTokenJWT
@@ -21,6 +22,7 @@ class VerifyTokenJWT
         $token = $request->header('authorization');
         $layout = $request->header('Layout');
         $unit_id = $request->header('UnitId');
+        $language = $request->header('Language', ConfigV6::LANGUAGE_VN);
         $payload = HelperV6::getPayloadFromTokenJWT($token);
         $dataJson = $payload['data'] ?? null;
         $expTime = !empty($payload['exp']) ? Carbon::createFromTimestamp($payload['exp']) : null;
@@ -49,6 +51,8 @@ class VerifyTokenJWT
         App::singleton('user', static function () use ($dataToken) {
             return $dataToken->User;
         });
+
+        config(['app.locale' => $language]);
 
         return $next($request);
     }
