@@ -76,4 +76,7 @@ class ConfigV6
 
     const VALIDATE_SUCCESSFUL = 1;
     const VALIDATE_FAILED = 0;
+
+    const MENU_TYPE_URL = 1;
+    const MENU_TYPE_CATEGORY = 2;
 }

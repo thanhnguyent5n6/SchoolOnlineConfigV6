@@ -10,4 +10,8 @@ return [
         'en' => 'Anh',
         'jp' => 'Nhật Bản',
     ],
+    'menu_type' => [
+        'url' => 'Đường dẫn',
+        'category' => 'Danh mục',
+    ],
 ];

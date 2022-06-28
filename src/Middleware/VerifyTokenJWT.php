@@ -46,6 +46,9 @@ class VerifyTokenJWT
         App::singleton('currentPermissions', static function () use ($permissions) {
             return $permissions;
         });
+        App::singleton('user', static function () use ($dataToken) {
+            return $dataToken->User;
+        });
 
         return $next($request);
     }

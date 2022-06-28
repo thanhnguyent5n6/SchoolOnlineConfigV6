@@ -47,4 +47,12 @@ class CommonLib
             ConfigV6::LAST_NAME,
         ];
     }
+
+    public static function getMenuTypes()
+    {
+        return [
+            ConfigV6::MENU_TYPE_URL => trans('common.menu_type.url'),
+            ConfigV6::MENU_TYPE_CATEGORY => trans('common.menu_type.category'),
+        ];
+    }
 }
