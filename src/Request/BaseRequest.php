@@ -43,7 +43,7 @@ class BaseRequest extends FormRequest
     {
         throw new HttpResponseException(response()->json([
             'status' => false,
-            'code'  => Response::HTTP_UNPROCESSABLE_ENTITY,
+            'code'  => Response::HTTP_BAD_REQUEST,
             'messages' => $validator->errors()
         ]));
     }
