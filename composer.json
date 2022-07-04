@@ -12,7 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": "*",
-        "laravel/framework": "*"
+        "laravel/framework": "*",
+        "spatie/data-transfer-object": "dev-main"
     },
     "autoload": {
         "psr-4": {

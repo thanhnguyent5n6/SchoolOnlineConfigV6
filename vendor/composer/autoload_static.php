@@ -75,6 +75,7 @@ class ComposerStaticInit3cb62015d1b3b3836f606c0df9cb4b4a
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\DataTransferObject\\' => 26,
             'SchoolOnline\\Config\\' => 20,
         ),
         'R' => 
@@ -253,6 +254,10 @@ class ComposerStaticInit3cb62015d1b3b3836f606c0df9cb4b4a
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Spatie\\DataTransferObject\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/data-transfer-object/src',
         ),
         'SchoolOnline\\Config\\' => 
         array (

@@ -5,7 +5,7 @@
         'type' => 'php',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'befa5b4144132c76a93ab8161ff7b53e5df3ef6a',
+        'reference' => '98353d08745dd6e7f66afbe2d7319e6b59b6d932',
         'name' => 'schoolonline/v6',
         'dev' => true,
     ),
@@ -484,7 +484,18 @@
             'type' => 'php',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'befa5b4144132c76a93ab8161ff7b53e5df3ef6a',
+            'reference' => '98353d08745dd6e7f66afbe2d7319e6b59b6d932',
+            'dev_requirement' => false,
+        ),
+        'spatie/data-transfer-object' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../spatie/data-transfer-object',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '5036b5da33cdf1a6391ab62d90120c6ba155e5b9',
             'dev_requirement' => false,
         ),
         'swiftmailer/swiftmailer' => array(

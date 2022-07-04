@@ -60,6 +60,7 @@
       <path value="$PROJECT_DIR$/vendor/brick/math" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/spatie/data-transfer-object" />
     </include_path>
   </component>
   <component name="PhpUnit">
