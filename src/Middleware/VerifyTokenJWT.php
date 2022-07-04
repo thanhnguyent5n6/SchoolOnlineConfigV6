@@ -19,6 +19,10 @@ class VerifyTokenJWT
      */
     public function handle($request, Closure $next)
     {
+        if ($request->isMethod('put')) {
+            return response('Request method gửi lên không hợp lệ', 400);
+        }
+
         $token = $request->header('authorization');
         $layout = $request->header('Layout');
         $unit_id = $request->header('UnitId');
