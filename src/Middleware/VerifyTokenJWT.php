@@ -33,8 +33,8 @@ class VerifyTokenJWT
             return response('Thiếu thông tin Layout gửi lên', 403);
         if(empty($unit_id))
             return response('Thiếu thông tin Đơn vị gửi lên', 403);
-        if(is_null($expTime) || $expTime->lt(Carbon::now()))
-            return response('Đã hết hạn phiên đăng nhập', 403);
+//        if(is_null($expTime) || $expTime->lt(Carbon::now()))
+//            return response('Đã hết hạn phiên đăng nhập', 403);
 
         $dataToken = json_decode($dataJson);
         $permissions = HelperV6::getPermissionsFromLayoutUnit($layout, $unit_id, $dataToken);
