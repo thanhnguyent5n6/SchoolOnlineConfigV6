@@ -6,9 +6,11 @@ use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
 use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
+#[AsCommand(name: 'db:seed')]
 class SeedCommand extends Command
 {
     use ConfirmableTrait;
@@ -84,7 +86,7 @@ class SeedCommand extends Command
     {
         $class = $this->input->getArgument('class') ?? $this->input->getOption('class');
 
-        if (strpos($class, '\\') === false) {
+        if (! str_contains($class, '\\')) {
             $class = 'Database\\Seeders\\'.$class;
         }
 

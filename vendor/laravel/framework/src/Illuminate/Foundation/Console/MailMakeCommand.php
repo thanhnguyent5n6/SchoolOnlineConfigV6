@@ -5,8 +5,10 @@ namespace Illuminate\Foundation\Console;
 use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
+#[AsCommand(name: 'make:mail')]
 class MailMakeCommand extends GeneratorCommand
 {
     use CreatesMatchingTest;
@@ -93,7 +95,11 @@ class MailMakeCommand extends GeneratorCommand
         $view = $this->option('markdown');
 
         if (! $view) {
-            $view = 'mail.'.Str::kebab(class_basename($this->argument('name')));
+            $name = str_replace('\\', '/', $this->argument('name'));
+
+            $view = 'mail.'.collect(explode('/', $name))
+                ->map(fn ($part) => Str::kebab($part))
+                ->implode('.');
         }
 
         return $view;

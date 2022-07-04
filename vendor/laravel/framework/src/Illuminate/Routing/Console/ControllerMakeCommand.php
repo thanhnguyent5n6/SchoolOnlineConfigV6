@@ -5,8 +5,10 @@ namespace Illuminate\Routing\Console;
 use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
 use InvalidArgumentException;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
+#[AsCommand(name: 'make:controller')]
 class ControllerMakeCommand extends GeneratorCommand
 {
     use CreatesMatchingTest;
@@ -59,7 +61,7 @@ class ControllerMakeCommand extends GeneratorCommand
             $stub = str_replace('.stub', '.api.stub', $stub);
         }
 
-        $stub = $stub ?? '/stubs/controller.plain.stub';
+        $stub ??= '/stubs/controller.plain.stub';
 
         return $this->resolveStubPath($stub);
     }
@@ -126,10 +128,9 @@ class ControllerMakeCommand extends GeneratorCommand
     {
         $parentModelClass = $this->parseModel($this->option('parent'));
 
-        if (! class_exists($parentModelClass)) {
-            if ($this->confirm("A {$parentModelClass} model does not exist. Do you want to generate it?", true)) {
-                $this->call('make:model', ['name' => $parentModelClass]);
-            }
+        if (! class_exists($parentModelClass) &&
+            $this->confirm("A {$parentModelClass} model does not exist. Do you want to generate it?", true)) {
+            $this->call('make:model', ['name' => $parentModelClass]);
         }
 
         return [
@@ -155,10 +156,8 @@ class ControllerMakeCommand extends GeneratorCommand
     {
         $modelClass = $this->parseModel($this->option('model'));
 
-        if (! class_exists($modelClass)) {
-            if ($this->confirm("A {$modelClass} model does not exist. Do you want to generate it?", true)) {
-                $this->call('make:model', ['name' => $modelClass]);
-            }
+        if (! class_exists($modelClass) && $this->confirm("A {$modelClass} model does not exist. Do you want to generate it?", true)) {
+            $this->call('make:model', ['name' => $modelClass]);
         }
 
         $replace = $this->buildFormRequestReplacements($replace, $modelClass);
@@ -237,7 +236,7 @@ class ControllerMakeCommand extends GeneratorCommand
     /**
      * Generate the form requests for the given model and classes.
      *
-     * @param  string  $modelName
+     * @param  string  $modelClass
      * @param  string  $storeRequestClass
      * @param  string  $updateRequestClass
      * @return array

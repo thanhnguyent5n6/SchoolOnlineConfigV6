@@ -4,7 +4,9 @@ namespace Illuminate\Queue\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand(name: 'queue:failed')]
 class ListFailedCommand extends Command
 {
     /**
@@ -36,7 +38,7 @@ class ListFailedCommand extends Command
     public function handle()
     {
         if (count($jobs = $this->getFailedJobs()) === 0) {
-            return $this->info('No failed jobs!');
+            return $this->comment('No failed jobs found.');
         }
 
         $this->displayFailedJobs($jobs);

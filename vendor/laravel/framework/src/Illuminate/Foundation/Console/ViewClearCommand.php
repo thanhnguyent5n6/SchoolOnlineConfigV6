@@ -5,7 +5,9 @@ namespace Illuminate\Foundation\Console;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use RuntimeException;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand(name: 'view:clear')]
 class ViewClearCommand extends Command
 {
     /**
@@ -61,6 +63,6 @@ class ViewClearCommand extends Command
             $this->files->delete($view);
         }
 
-        $this->info('Compiled views cleared!');
+        $this->info('Compiled views cleared successfully.');
     }
 }

@@ -13,7 +13,7 @@
     "require": {
         "php": "*",
         "laravel/framework": "*",
-        "spatie/data-transfer-object": "dev-main"
+        "spatie/data-transfer-object": "3.8.1"
     },
     "autoload": {
         "psr-4": {

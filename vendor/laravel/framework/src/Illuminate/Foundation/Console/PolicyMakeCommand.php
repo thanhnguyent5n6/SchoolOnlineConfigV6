@@ -5,8 +5,10 @@ namespace Illuminate\Foundation\Console;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 use LogicException;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
+#[AsCommand(name: 'make:policy')]
 class PolicyMakeCommand extends GeneratorCommand
 {
     /**
@@ -105,7 +107,7 @@ class PolicyMakeCommand extends GeneratorCommand
     {
         $model = str_replace('/', '\\', $model);
 
-        if (Str::startsWith($model, '\\')) {
+        if (str_starts_with($model, '\\')) {
             $namespacedModel = trim($model, '\\');
         } else {
             $namespacedModel = $this->qualifyModel($model);
