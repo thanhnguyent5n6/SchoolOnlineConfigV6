@@ -41,10 +41,13 @@ class BaseRequest extends FormRequest
 
     protected function failedValidation(Validator $validator)
     {
+        $errorMessage = "";
+        foreach($validator->errors()->toArray() as $key => $message) {
+            $errorMessage .= implode("<br/>", $message) . "<br/>";
+        }
         throw new HttpResponseException(response()->json([
-            'status' => false,
-            'code'  => Response::HTTP_BAD_REQUEST,
-            'messages' => $validator->errors()
+            'status' => 0,
+            'msg' => $errorMessage
         ]));
     }
 }
