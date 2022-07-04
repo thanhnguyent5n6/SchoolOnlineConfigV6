@@ -3,11 +3,11 @@
 namespace SchoolOnline\Request;
 
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Response;
-use Spatie\DataTransferObject\DataTransferObject;
 
-abstract class BaseRequest extends DataTransferObject
+class BaseRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,20 +24,26 @@ abstract class BaseRequest extends DataTransferObject
      *
      * @return array<string, mixed>
      */
-    public abstract function rules();
+    public function rules()
+    {
+        return [];
+    }
 
     /**
      * Get the error messages for the defined validation rules.
      *
      * @return array
      */
-    public abstract function messages();
+    public function messages()
+    {
+        return [];
+    }
 
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([
-            'status'   => false,
-            'code'     => Response::HTTP_UNPROCESSABLE_ENTITY,
+            'status' => false,
+            'code'  => Response::HTTP_BAD_REQUEST,
             'messages' => $validator->errors()
         ]));
     }
