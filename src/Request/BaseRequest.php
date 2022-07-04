@@ -45,6 +45,7 @@ class BaseRequest extends FormRequest
         foreach($validator->errors()->toArray() as $key => $message) {
             $errorMessage .= implode("<br/>", $message) . "<br/>";
         }
+        $errorMessage = rtrim($errorMessage, "<br/>");
         throw new HttpResponseException(response()->json([
             'status' => 0,
             'msg' => $errorMessage
