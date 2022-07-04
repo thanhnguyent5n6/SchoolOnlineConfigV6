@@ -4,6 +4,8 @@
 namespace SchoolOnline\Config;
 
 
+use Carbon\Carbon;
+
 class HelperV6
 {
     /**
@@ -53,5 +55,23 @@ class HelperV6
             }
         }
         return $permissions;
+    }
+
+    public static function fireBaseSuccessMessage($message)
+    {
+        return json_encode(array(
+            'status' => true,
+            'message' => $message,
+            'time' => Carbon::now()->timestamp
+        ));
+    }
+
+    public static function fireBaseErrorMessage($message)
+    {
+        return json_encode(array(
+            'status' => false,
+            'message' => $message,
+            'time' => Carbon::now()->timestamp
+        ));
     }
 }

@@ -29,6 +29,9 @@ class ComposerStaticInit3cb62015d1b3b3836f606c0df9cb4b4a
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '00097a3f93a60034cdd0c031ac8e2a4e' => __DIR__ . '/../..' . '/src/init.php',
+        'c16749509e78ab0d5369649e609b8421' => __DIR__ . '/../..' . '/src/Middleware/VerifyTokenJWT.php',
+        'de1a78d681b4727dc491f25f303160d4' => __DIR__ . '/../..' . '/src/Service/BaseService.php',
+        '796ec7596ab490228f70b5b6ddd7e36c' => __DIR__ . '/../..' . '/src/Request/BaseRequest.php',
     );
 
     public static $prefixLengthsPsr4 = array (

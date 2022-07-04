@@ -5,7 +5,7 @@
         'type' => 'php',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'fbab555e0389706c828b8685b0c2a3fcccc958cd',
+        'reference' => 'befa5b4144132c76a93ab8161ff7b53e5df3ef6a',
         'name' => 'schoolonline/v6',
         'dev' => true,
     ),
@@ -435,8 +435,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -484,7 +484,7 @@
             'type' => 'php',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'fbab555e0389706c828b8685b0c2a3fcccc958cd',
+            'reference' => 'befa5b4144132c76a93ab8161ff7b53e5df3ef6a',
             'dev_requirement' => false,
         ),
         'swiftmailer/swiftmailer' => array(

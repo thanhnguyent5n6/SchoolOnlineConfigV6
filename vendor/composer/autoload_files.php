@@ -28,4 +28,7 @@ return array(
     'f0906e6318348a765ffb6eb24e0d0938' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
     '58571171fd5812e6e447dce228f52f4d' => $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
     '00097a3f93a60034cdd0c031ac8e2a4e' => $baseDir . '/src/init.php',
+    'c16749509e78ab0d5369649e609b8421' => $baseDir . '/src/Middleware/VerifyTokenJWT.php',
+    'de1a78d681b4727dc491f25f303160d4' => $baseDir . '/src/Service/BaseService.php',
+    '796ec7596ab490228f70b5b6ddd7e36c' => $baseDir . '/src/Request/BaseRequest.php',
 );
