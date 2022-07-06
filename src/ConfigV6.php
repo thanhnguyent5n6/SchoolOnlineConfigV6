@@ -53,7 +53,7 @@ class ConfigV6
     const LOCATION_EN = 'en';
     const LOCATION_JAPAN = 'jp';
 
-    const TIMEZONE_VN  = 'UTC +07:00';
+    const TIMEZONE_VN = 'UTC +07:00';
 
     const LANGUAGE_VN = 'vi';
     const LANGUAGE_EN = 'en';
@@ -82,4 +82,6 @@ class ConfigV6
 
     const MENU_TYPE_URL = 1;
     const MENU_TYPE_CATEGORY = 2;
+
+    const IMAGE_SIZE = 1024;
 }
