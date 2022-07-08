@@ -24,7 +24,7 @@
             "src/Service/BaseService.php",
             "src/Request/BaseRequest.php",
             "src/Transform/BaseTransformer.php",
-            "src/FirebaseReference.php"
+            "src/FirebaseOMT.php"
         ]
     }
 }

@@ -6,14 +6,12 @@ namespace SchoolOnline\Config;
 
 use Carbon\Carbon;
 
-class Firebase
+class FirebaseOMT
 {
     const CREATE_MENU_ITEM = 'menu-item/create';
     const UPDATE_MENU_ITEM = 'menu-item/update';
 
     /**
-     * Only using via request
-     *
      * @param string $userId
      * @param string $path , from FirebaseReference
      * @param string $message
