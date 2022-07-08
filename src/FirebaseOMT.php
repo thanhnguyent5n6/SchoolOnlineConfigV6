@@ -10,6 +10,8 @@ class FirebaseOMT
 {
     const CREATE_MENU_ITEM = 'menu-item/create';
     const UPDATE_MENU_ITEM = 'menu-item/update';
+    const CREATE_TENANT = 'tenant-manager/update';
+    const UPDATE_TENANT = 'tenant-manager/update';
 
     /**
      * @param string $userId
