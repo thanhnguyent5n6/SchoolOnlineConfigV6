@@ -8,10 +8,12 @@ use Carbon\Carbon;
 
 class FirebaseOMT
 {
-    const CREATE_MENU_ITEM = 'menu-item/create';
-    const UPDATE_MENU_ITEM = 'menu-item/update';
     const CREATE_TENANT = 'tenant-manager/update';
     const UPDATE_TENANT = 'tenant-manager/update';
+    const CREATE_MENU_ITEM = 'menu-item/create';
+    const UPDATE_MENU_ITEM = 'menu-item/update';
+    const CREATE_MENU_PACKAGE = 'menu-package/create';
+    const UPDATE_MENU_PACKAGE = 'menu-package/update';
 
     /**
      * @param string $userId
