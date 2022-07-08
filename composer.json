@@ -23,7 +23,7 @@
             "src/Middleware/VerifyTokenJWT.php",
             "src/Service/BaseService.php",
             "src/Request/BaseRequest.php",
-            "src/Model/BaseModel.php"
+            "src/Transform/BaseTransformer.php"
         ]
     }
 }
