@@ -26,7 +26,7 @@ abstract class BaseTransformer
             'size'       => $items->perPage(),
             'page'       => $items->currentPage(),
             'countItems' => count($items->items()),
-            'totalItems' => $items->lastPage(),
+            'totalItems' => $items->total(),
             'data'       => $this->transformCollection($items),
         );
     }
