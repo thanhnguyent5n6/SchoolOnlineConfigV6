@@ -23,13 +23,11 @@ abstract class BaseTransformer
     public function transformPaginate(LengthAwarePaginator $items)
     {
         return array(
-            [
-                'size'       => $items->perPage(),
-                'page'       => $items->currentPage(),
-                'countItems' => count($items->items()),
-                'totalItems' => $items->lastPage(),
-                'data'       => $this->transformCollection($items),
-            ]
+            'size'       => $items->perPage(),
+            'page'       => $items->currentPage(),
+            'countItems' => count($items->items()),
+            'totalItems' => $items->lastPage(),
+            'data'       => $this->transformCollection($items),
         );
     }
 
