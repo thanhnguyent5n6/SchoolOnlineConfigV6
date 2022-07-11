@@ -19,8 +19,6 @@ class VerifyTokenJWT
      */
     public function handle($request, Closure $next)
     {
-        if(env('APP_ENV') === "testing")
-            return $next($request);
         if ($request->isMethod('put')) {
             return response('Request method gửi lên không hợp lệ', 400);
         }

@@ -24,16 +24,20 @@ class FirebaseOMT
      */
     public static function addFirebase(string $userId, string $path, string $message, bool $status)
     {
-        $firebase = app('firebase.database');
-        if (empty($firebase))
+        try {
+            $firebase = app('firebase.database');
+            if (empty($firebase))
+                return false;
+            $path .= "/" . md5($userId);
+            $data = json_encode([
+                'status'  => $status,
+                'message' => $message,
+                'time'    => Carbon::now()->timestamp
+            ]);
+            $firebase->getReference($path)->push($data);
+            return true;
+        } catch (\Exception $exception) {
             return false;
-        $path .= "/" . md5($userId);
-        $data = json_encode([
-            'status'  => $status,
-            'message' => $message,
-            'time'    => Carbon::now()->timestamp
-        ]);
-        $firebase->getReference($path)->push($data);
-        return true;
+        }
     }
 }

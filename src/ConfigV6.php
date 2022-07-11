@@ -6,6 +6,8 @@ namespace SchoolOnline\Config;
 
 class ConfigV6
 {
+    const ENV_TESTING = "testing";
+
     const GENDER_MALE = 1;
     const GENDER_FEMALE = 2;
 
@@ -14,6 +16,9 @@ class ConfigV6
 
     const NO_ACTIVE = 0;
     const ACTIVE = 1;
+
+    const RESPONSE_FAILED = 0;
+    const RESPONSE_SUCCESSFULLY = 1;
 
     const DAY_OF_WEEK_SUNDAY = 0;//Chu nhat
     const DAY_OF_WEEK_MONDAY = 1;//Thu 2
@@ -84,4 +89,7 @@ class ConfigV6
     const MENU_TYPE_CATEGORY = 2;
 
     const IMAGE_SIZE = 1024;
+
+    const DEFAULT_PAGE_SIZE = 10;
+    const DEFAULT_PAGE_INDEX = 1;
 }
