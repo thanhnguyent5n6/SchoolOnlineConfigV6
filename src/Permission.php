@@ -8,7 +8,7 @@ class Permission
 {
     public static function allows($permissions)
     {
-        if(!in_array(Permission::OMT_MANAGER, app('permissions')))
+        if(!in_array($permissions, app('permissions')))
             return false;
 
         return true;
@@ -16,7 +16,7 @@ class Permission
 
     public static function denies($permissions)
     {
-        if(!in_array(Permission::OMT_MANAGER, app('permissions')))
+        if(!in_array($permissions, app('permissions')))
             return true;
 
         return false;
