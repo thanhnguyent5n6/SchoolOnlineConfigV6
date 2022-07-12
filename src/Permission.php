@@ -8,16 +8,16 @@ class Permission
 {
     public static function allows($permissions)
     {
-        if(!in_array($permissions, app('permissions')))
-            return false;
+//        if(!in_array($permissions, app('permissions')))
+//            return false;
 
         return true;
     }
 
     public static function denies($permissions)
     {
-        if(!in_array($permissions, app('permissions')))
-            return true;
+//        if(!in_array($permissions, app('permissions')))
+//            return true;
 
         return false;
     }
