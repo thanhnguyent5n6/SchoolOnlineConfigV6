@@ -14,5 +14,7 @@ return [
         'url' => 'Đường dẫn',
         'category' => 'Danh mục',
     ],
-    'accessDenied' => 'Bạn không có quyền truy cập tính năng này',
+    'permission' => [
+        'access_denied' => 'Bạn không có quyền truy cập tính năng này',
+    ]
 ];

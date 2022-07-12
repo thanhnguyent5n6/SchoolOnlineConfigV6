@@ -24,7 +24,7 @@ class Permission
 
     public static function response403()
     {
-        return response(trans('common.accessDenied'), 403);
+        return response(trans('common.permission.access_denied'), 403);
     }
 
     const OMT_ACCESS = "omt_access";
