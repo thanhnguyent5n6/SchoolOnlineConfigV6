@@ -14,6 +14,8 @@ class FirebaseOMT
     const UPDATE_MENU_ITEM = 'menu-item/update';
     const CREATE_MENU_PACKAGE = 'menu-package/create';
     const UPDATE_MENU_PACKAGE = 'menu-package/update';
+    const CREATE_SUBJECT_ITEM = 'subject/create';
+    const UPDATE_SUBJECT_ITEM = 'subject/update';
 
     /**
      * @param string $userId

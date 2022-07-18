@@ -29,4 +29,6 @@ class Permission
 
     const OMT_ACCESS = "omt_access";
     const OMT_MANAGER = "omt_manager";
+    const SUBJECT_ACCESS = "subject_access";
+    const SUBJECT_MANAGER = "subject_manager";
 }
