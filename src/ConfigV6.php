@@ -94,4 +94,19 @@ class ConfigV6
 
     const DEFAULT_PAGE_SIZE = 10;
     const DEFAULT_PAGE_INDEX = 1;
+
+    const KEY_DATE_FORMAT = 'date'; // key hien thi thang nam
+    const KEY_DATETIME_FORMAT = 'timedate'; // key hien thi ngay thang nam - gio phut giay
+    const KEY_SHORT_DATETIME_FORMAT = 'shorttime'; // key hien thị gio phut - ngay thang nam
+    const KEY_TIME_FORMAT = 'time'; // key hien thị gio phut
+    const KEY_TIME_SECOND_FORMAT = 'timesecond'; // key hien thi gio phut giay
+    const KEY_DATETIME_FORMAT_2 = 'datetime';  // key hien thi ngay thang nam - gio phut giay
+
+    const SUBJECT_MOET = 1;
+    const SUBJECT_PRIVATE = 2;
+    const SUBJECT_BILINGUAL = 3;
+
+    const EDUCATIONAL_STAGE_PRIMARY_SCHOOL = 1;
+    const EDUCATIONAL_STAGE_SECONDARY_SCHOOL = 2;
+    const EDUCATIONAL_STAGE_HIGH_SCHOOL = 3;
 }

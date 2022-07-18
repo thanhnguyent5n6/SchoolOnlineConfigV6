@@ -84,5 +84,16 @@ class Enum
         ConfigV6::MENU_TYPE_CATEGORY,
     ];
 
+    const SubjectType = [
+        ConfigV6::SUBJECT_MOET,
+        ConfigV6::SUBJECT_PRIVATE,
+        ConfigV6::SUBJECT_BILINGUAL,
+    ];
+
+    const EducationalStages = [
+        ConfigV6::EDUCATIONAL_STAGE_PRIMARY_SCHOOL,
+        ConfigV6::EDUCATIONAL_STAGE_SECONDARY_SCHOOL,
+        ConfigV6::EDUCATIONAL_STAGE_HIGH_SCHOOL,
+    ];
 
 }
